@@ -400,6 +400,8 @@
       text-transform: uppercase;
       color: var(--teal-dim);
       margin-bottom: 12px;
+      position: relative;
+      z-index: 2;
     }
 
     .section-title {
@@ -408,6 +410,8 @@
       font-weight: 700;
       line-height: 1.25;
       margin-bottom: 20px;
+      position: relative;
+      z-index: 2;
     }
 
     .section-subtitle {
@@ -416,6 +420,26 @@
       max-width: 650px;
       line-height: 1.7;
       margin-bottom: 48px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Halo effects for readable text over absolute decors */
+    .recognition .section-title, .recognition .section-subtitle, .recognition .section-label,
+    .frameworks .section-title, .frameworks .section-label,
+    .schedule .section-title, .schedule .section-label {
+      text-shadow: 0 0 12px var(--sand-light), 0 0 24px var(--sand-light), 0 0 36px var(--sand-light), 0 0 48px var(--sand-light);
+    }
+
+    .format .section-title, .format .section-subtitle, .format .section-label,
+    .speakers .section-title, .speakers .section-subtitle, .speakers .section-label,
+    .faq .section-title, .faq .section-label {
+      text-shadow: 0 0 12px var(--white), 0 0 24px var(--white), 0 0 36px var(--white), 0 0 48px var(--white);
+    }
+
+    .promise .section-title, .promise .section-subtitle, .promise .section-label, .promise-key,
+    .why-free .section-title, .why-free .section-subtitle, .why-free .section-label {
+      text-shadow: 0 0 12px var(--indigo-deep), 0 0 24px var(--indigo-deep), 0 0 36px var(--indigo-deep), 0 0 48px var(--indigo-deep);
     }
 
     /* ===== BLOCK 1: RECOGNITION ===== */
@@ -682,6 +706,9 @@
       max-width: 700px;
       line-height: 1.7;
       margin-bottom: 48px;
+      position: relative;
+      z-index: 2;
+      text-shadow: 0 0 12px var(--sand-light), 0 0 24px var(--sand-light), 0 0 36px var(--sand-light), 0 0 48px var(--sand-light);
     }
 
     .framework-list {
@@ -1149,7 +1176,7 @@
     }
 
     /* ===== RESPONSIVE ===== */
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       section {
         padding: 64px 20px;
       }
@@ -1158,11 +1185,7 @@
         padding: 100px 20px 80px;
       }
 
-      .recognition-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .promise-grid {
+      .recognition-grid, .promise-grid, .format-columns {
         grid-template-columns: 1fr;
       }
 
@@ -1171,6 +1194,33 @@
         max-width: 360px;
         margin-left: auto;
         margin-right: auto;
+      }
+
+      /* Protect text on mobile by increasing opacity of cards */
+      .recognition-card, .framework-card, .speaker-card {
+        background: rgba(250, 247, 239, 0.96);
+        padding: 24px 20px;
+      }
+
+      .promise-item {
+        background: rgba(10, 27, 53, 0.9);
+        padding: 24px 20px;
+      }
+
+      .format-item {
+        background: rgba(245, 238, 223, 0.96);
+        padding: 20px 16px;
+      }
+
+      .format-left {
+        background: rgba(250, 247, 239, 0.96);
+        padding: 28px 20px;
+      }
+
+      /* Scale down icons slightly for more text space */
+      .format-item .fi-icon, .recognition-card .card-icon {
+        width: 40px;
+        height: 40px;
       }
 
       .schedule-table .sched-date {
@@ -1338,7 +1388,7 @@
             </div>
           </div>
           <div class="format-item">
-            <div class="fi-icon" style="background: var(--indigo); font-size: 24px; mix-blend-mode: normal;">&#x1F91D;</div>
+            <div class="fi-icon"><img src="icon_handshake.png" alt="Icon" style="width: 100%; height: 100%; object-fit: contain;"></div>
             <div>
               <h4>Доброжелательная среда</h4>
               <p>Среди профессионалов с&nbsp;большим опытом в&nbsp;разных индустриях и&nbsp;странах.</p>
