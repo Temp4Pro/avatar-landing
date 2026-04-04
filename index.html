@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Мастерская Аватара — Трансформация наглядно</title>
+  <link rel="icon" href="favicon.png" type="image/png">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
 
@@ -1107,97 +1108,6 @@
       opacity: 0.6;
     }
 
-    /* ===== FORM MODAL ===== */
-    .modal-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(15, 26, 46, 0.85);
-      backdrop-filter: blur(8px);
-      z-index: 200;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .modal-overlay.active {
-      display: flex;
-    }
-
-    .modal-box {
-      background: var(--white);
-      border-radius: 12px;
-      padding: 48px;
-      max-width: 460px;
-      width: 90%;
-      position: relative;
-    }
-
-    .modal-close {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      background: none;
-      border: none;
-      font-size: 24px;
-      cursor: pointer;
-      color: #999;
-      width: 32px;
-      height: 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .modal-box h2 {
-      font-family: 'Noto Serif', serif;
-      font-size: 24px;
-      margin-bottom: 8px;
-    }
-
-    .modal-box .modal-sub {
-      font-size: 14px;
-      color: #5A6A7A;
-      margin-bottom: 28px;
-    }
-
-    .form-group {
-      margin-bottom: 16px;
-    }
-
-    .form-group label {
-      display: block;
-      font-size: 13px;
-      font-weight: 600;
-      margin-bottom: 6px;
-      color: var(--indigo);
-    }
-
-    .form-group input {
-      width: 100%;
-      padding: 12px 16px;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      font-size: 15px;
-      font-family: 'Inter', sans-serif;
-      transition: border-color 0.2s;
-    }
-
-    .form-group input:focus {
-      outline: none;
-      border-color: var(--teal);
-    }
-
-    .form-group .optional {
-      font-weight: 400;
-      color: #999;
-      font-size: 12px;
-    }
-
-    .form-submit {
-      width: 100%;
-      margin-top: 8px;
-    }
-
     /* ===== FOOTER ===== */
     footer {
       background: var(--indigo-deep);
@@ -1299,9 +1209,6 @@
         width: auto;
       }
 
-      .modal-box {
-        padding: 32px 24px;
-      }
     }
   </style>
 </head>
@@ -1312,7 +1219,7 @@
   <nav>
     <div class="nav-inner">
       <div class="logo">Мастерская Аватара <span>·</span> Из серии &laquo;Трансформация наглядно&raquo;</div>
-      <a href="#register" class="cta-nav" onclick="openModal(event)">Записаться</a>
+      <a href="https://t.me/+h-oHNlgp3qY0ZTAy" class="cta-nav" target="_blank" rel="noopener noreferrer">Записаться</a>
     </div>
   </nav>
 
@@ -1339,7 +1246,7 @@
         <div class="hero-meta-item"><strong>Формат:</strong> 7 вебинаров</div>
         <div class="hero-meta-item"><strong>Стоимость:</strong> бесплатно</div>
       </div>
-      <a href="#register" class="cta-button" onclick="openModal(event)">Записаться</a>
+      <a href="https://t.me/+h-oHNlgp3qY0ZTAy" class="cta-button" target="_blank" rel="noopener noreferrer">Записаться</a>
       <div class="hero-quote">
         &laquo;Всё должно быть настолько просто, насколько это возможно, но не&nbsp;проще&raquo;
         <cite>Альберт Эйнштейн</cite>
@@ -1545,10 +1452,10 @@
         в&nbsp;разных индустриях и&nbsp;странах.</p>
       <div class="speakers-grid">
         <div class="speaker-card reveal">
-          <div class="speaker-avatar"><img src="hokusai_speaker1.png" alt="Лана Х."></div>
-          <h3>Лана Холмен</h3>
-          <div class="speaker-role">Changer с заботой о людях и фокусом на результат.</div>
-          <p>Люблю, верю и строю сообщества.</p>
+          <div class="speaker-avatar"><img src="hokusai_speaker3.png" alt="Елизавета Г."></div>
+          <h3>Елизавета Гусева</h3>
+          <div class="speaker-role">Верит, что люди созданы для осмысления, а не для рутины.</div>
+          <p>Преобразую эту веру в реальные изменения бизнеса.</p>
         </div>
         <div class="speaker-card reveal">
           <div class="speaker-avatar"><img src="hokusai_speaker2.png" alt="Степан М."></div>
@@ -1557,10 +1464,10 @@
           <p>Апологет движения к результату без пробуксовок.</p>
         </div>
         <div class="speaker-card reveal">
-          <div class="speaker-avatar"><img src="hokusai_speaker3.png" alt="Елизавета Г."></div>
-          <h3>Елизавета Гусева</h3>
-          <div class="speaker-role">Верит, что люди созданы для осмысления, а не для рутины.</div>
-          <p>Преобразую эту веру в реальные изменения бизнеса.</p>
+          <div class="speaker-avatar"><img src="hokusai_speaker1.png" alt="Лана Х."></div>
+          <h3>Лана Холмс</h3>
+          <div class="speaker-role">Changer с заботой о людях и фокусом на результат.</div>
+          <p>Люблю, верю и строю сообщества.</p>
         </div>
       </div>
       <p class="speakers-total reveal">На&nbsp;троих &mdash; более 50 лет опыта в&nbsp;управлении трансформациями</p>
@@ -1587,7 +1494,8 @@
   <section class="schedule" id="schedule">
     <div class="section-inner">
       <div class="section-label reveal">Расписание</div>
-      <h2 class="section-title reveal">7 встреч. По&nbsp;средам. Раз в&nbsp;две недели.</h2>
+      <h2 class="section-title reveal">7 встреч. По&nbsp;средам. Раз в&nbsp;две недели.
+        В&nbsp;19:00&nbsp;по&nbsp;МСК.<sup>*</sup></h2>
       <table class="schedule-table reveal">
         <thead>
           <tr>
@@ -1634,7 +1542,8 @@
           </tr>
         </tbody>
       </table>
-      <p class="schedule-note reveal">Время проведения уточняется. Все вебинары записываются &mdash; запись доступна
+      <p class="schedule-note reveal"><sup>*</sup> Даты и время могут быть скорректированы. Все вебинары записываются
+        &mdash; запись доступна
         после каждой встречи.</p>
     </div>
   </section>
@@ -1697,34 +1606,10 @@
     <div class="section-inner">
       <h2 class="section-title reveal">Готовы?</h2>
       <p class="cta-sub reveal">Старт 29&nbsp;апреля. 7&nbsp;встреч. Бесплатно.</p>
-      <a href="#register" class="cta-button reveal" onclick="openModal(event)">Записаться</a>
+      <a href="https://t.me/+h-oHNlgp3qY0ZTAy" class="cta-button reveal" target="_blank" rel="noopener noreferrer">Записаться</a>
       <p class="cta-closing reveal">Посмотрите &laquo;Аватар&raquo;. Остальное &mdash; за&nbsp;нами.</p>
     </div>
   </section>
-
-  <!-- REGISTRATION MODAL -->
-  <div class="modal-overlay" id="modal">
-    <div class="modal-box">
-      <button class="modal-close" onclick="closeModal()">&times;</button>
-      <h2>Записаться</h2>
-      <p class="modal-sub">Мастерская Аватара &middot; Старт 29&nbsp;апреля 2026</p>
-      <form onsubmit="handleSubmit(event)">
-        <div class="form-group">
-          <label>Имя</label>
-          <input type="text" name="name" required placeholder="Как вас зовут">
-        </div>
-        <div class="form-group">
-          <label>Email</label>
-          <input type="email" name="email" required placeholder="your@email.com">
-        </div>
-        <div class="form-group">
-          <label>Роль / компания <span class="optional">(необязательно)</span></label>
-          <input type="text" name="role" placeholder="Например: PM в&nbsp;Яндекс">
-        </div>
-        <button type="submit" class="cta-button form-submit">Записаться</button>
-      </form>
-    </div>
-  </div>
 
   <!-- FOOTER -->
   <footer>
@@ -1765,32 +1650,6 @@
       item.classList.toggle('open');
     }
 
-    // Modal
-    function openModal(e) {
-      e.preventDefault();
-      document.getElementById('modal').classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeModal() {
-      document.getElementById('modal').classList.remove('active');
-      document.body.style.overflow = '';
-    }
-    document.getElementById('modal').addEventListener('click', function (e) {
-      if (e.target === this) closeModal();
-    });
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') closeModal();
-    });
-
-    // Form submit (placeholder)
-    function handleSubmit(e) {
-      e.preventDefault();
-      const form = e.target;
-      const name = form.querySelector('[name="name"]').value;
-      alert('Спасибо, ' + name + '! Мы свяжемся с вами перед стартом.');
-      closeModal();
-      form.reset();
-    }
   </script>
 
 </body>
