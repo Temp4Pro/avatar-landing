@@ -5,6 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Мастерская Аватара — Трансформация наглядно</title>
+  
+  <!-- SEO & Open Graph (для красивых ссылок в Telegram, WhatsApp и т.д.) -->
+  <meta name="description" content="Разбираем инструменты управления трансформацией бизнеса на примере фильма, который видели все.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Мастерская Аватара — Трансформация наглядно">
+  <meta property="og:description" content="Разбираем инструменты управления трансформацией бизнеса на примере фильма, который видели все.">
+  <meta property="og:image" content="/hokusai_banner_og.png">
+  <meta property="og:url" content="https://changeclub.ru">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Мастерская Аватара — Трансформация наглядно">
+  <meta name="twitter:description" content="Разбираем инструменты управления трансформацией бизнеса на примере фильма, который видели все.">
+  <meta name="twitter:image" content="/hokusai_banner_og.png">
+
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="shortcut icon" href="/favicon.ico" />
@@ -144,6 +158,17 @@
       inset: 0;
       overflow: hidden;
       background-color: var(--indigo-deep);
+    }
+    
+    .hero-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('hokusai_avatar_landscape.png');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.35;
+      mix-blend-mode: hard-light;
     }
 
     /* Bioluminescent particles */
@@ -311,11 +336,16 @@
       animation: float 22s ease-in-out infinite 1s;
     }
 
-    .decor-science {
+    .decor-faces {
       right: 5%;
       top: 15%;
-      width: 250px;
-      animation: float 12s ease-in-out infinite alternate;
+      width: 320px;
+      border-radius: 12px;
+      opacity: 0.85;
+      box-shadow: 0 20px 50px rgba(10, 27, 53, 0.8);
+      border: 1px solid rgba(0, 229, 255, 0.2);
+      animation: float 14s ease-in-out infinite alternate;
+      transform: rotate(3deg);
     }
 
     .hero-content {
@@ -329,11 +359,12 @@
     .hero-series {
       font-family: 'Inter', sans-serif;
       font-size: 13px;
-      font-weight: 500;
+      font-weight: 700;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: var(--teal);
+      color: var(--teal-glow);
       margin-bottom: 16px;
+      text-shadow: 0 0 4px var(--indigo-deep), 0 0 10px rgba(10, 27, 53, 0.9);
     }
 
     .hero-title {
@@ -347,10 +378,12 @@
 
     .hero-pitch {
       font-size: 18px;
-      color: var(--text-muted);
+      color: var(--sand);
       line-height: 1.7;
       max-width: 600px;
       margin: 0 auto 36px;
+      font-weight: 500;
+      text-shadow: 0 0 3px var(--indigo-deep), 0 0 8px var(--indigo-deep), 0 0 15px rgba(10, 27, 53, 0.8);
     }
 
     .hero-meta {
@@ -398,11 +431,12 @@
       font-family: 'Noto Serif', serif;
       font-style: italic;
       font-size: 15px;
-      color: var(--text-muted);
-      opacity: 0.6;
+      color: var(--sand);
+      opacity: 0.9;
       max-width: 500px;
       margin-left: auto;
       margin-right: auto;
+      text-shadow: 0 0 3px var(--indigo-deep), 0 0 8px var(--indigo-deep), 0 0 15px rgba(10, 27, 53, 0.8);
     }
 
     .hero-quote cite {
@@ -1229,7 +1263,7 @@
 
   <!-- HERO -->
   <section class="hero">
-    <img class="decor-item mix-screen decor-science" src="hokusai_science.png" alt="">
+    <img class="decor-item decor-faces" src="hokusai_avatar_faces.png" alt="Avatar Faces">
     <div class="hero-bg">
       <div class="particles" id="particles"></div>
       <div class="hero-wave">
